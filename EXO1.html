@@ -1,0 +1,34 @@
+<script type = "text/javascript">
+  
+  function guessNumber() {
+
+const random = Math.floor(Math.random() * 10) + 1;
+
+let guessNumber=1;
+let number = parseInt(prompt('Devine le nombre entre 1 et 10: '));
+
+while (number!=random){
+if (guessNumber == 3) {
+    console.log("dommage le chiffre est :" + random);
+    return;
+
+}
+
+if(number > random) {
+    guessNumber++;
+    number = parseInt(prompt('Plus petit: '));
+    
+}
+else if(number < random) {
+    guessNumber++;
+    number = parseInt(prompt('Plus grand: '));
+}
+if(number == random) {
+    console.log('Correct.');
+
+}
+}
+}
+guessNumber();
+
+</script>

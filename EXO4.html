@@ -1,0 +1,35 @@
+<html>  
+<head> 
+<title></title>  
+</head>  
+<body>  
+<script>     
+console.log("Moyenne des eleves de la classe")
+function sortedStudents(arr) {
+    console.log(arr[0].name+' '+ arr[0].grades.reduce((acc,cur) => acc + cur) / arr[0].grades.length);
+    console.log(arr[1].name+' '+arr[1].grades.reduce((acc,cur) => acc + cur) / arr[0].grades.length);
+    console.log(arr[2].name+' '+arr[2].grades.reduce((acc,cur) => acc + cur) / arr[0].grades.length);
+    console.log(arr[3].name+' '+arr[3].grades.reduce((acc,cur) => acc + cur) / arr[0].grades.length);
+
+
+    console.log("Classement des eleves de la classe")
+return arr.sort((a,b) => {
+       return (
+         b.grades.reduce((acc,cur) => acc + cur) / b.grades.length -
+         a.grades.reduce((acc,cur) => acc + cur) / a.grades.length 
+       )
+   })
+}
+
+console.log(
+  sortedStudents([
+    { name: "Jhon", grades: [5, 10, 12, 9, 18] },
+    { name: "Jane", grades: [17, 18, 15, 16, 14] },
+    { name: "Paul", grades: [13,15,18,10,11] },
+    { name: "Camille", grades: [12,17,9,16,10] },
+  ])
+);
+
+</script>  
+    </body>  
+        </html>   

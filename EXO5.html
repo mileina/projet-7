@@ -1,0 +1,63 @@
+
+<script>
+var str = 'Sachez qu’il est difficile de déterminer un nombre exact de mots pour qualifier une phrase trop longue. Certains spécialistes affirment qu’à partir de 25 mots, un scripteur devrait songer à la terminer. Cependant, une phrase longue n’est pas fautive ou mauvaise en soi. Elle ne doit pas nécessairement être modifiée. C’est donc à vous de juger si sa formulation ne nuit pas à la compréhension et à la fluidité de la lecture.';
+  
+
+const result = str
+.replaceAll(",", " ")
+.replaceAll(".", " ")
+.replaceAll("?", " ")
+.replaceAll(":", " ")
+.replaceAll("’", " ")
+.toLowerCase();
+
+console.log(result);
+
+var c = str.split(' ').length;
+console.log("La chaîne se compose de " + c + " mots.");
+
+
+var ch = 'Sachez';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'est';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'difficile';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'déterminer';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'nombre';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'exacte';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'mots';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'pour';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'qualifier';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+var ch = 'une';
+var count = str.split(ch).length - 1;
+console.log("il ya" + " " + count+ " " + "fois le mot" +" " + ch);
+
+
+//je pense que tu voulais qu'on trouve comment on compte les mots de toutes la pharses, et ce qui m'aurais permis de faire un classement plus adequate mais je n'ai pas su le trouver, je suis navré.//
+
+</script>

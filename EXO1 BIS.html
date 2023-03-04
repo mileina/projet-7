@@ -1,0 +1,66 @@
+!                        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+  
+    <style>
+        html {
+    font-family: sans-serif;
+    }
+      
+        body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+    }
+    </style>
+</head>
+  
+<body>
+<h1>Trouve le nombre</h1>
+  
+<p>Devine le nombre entre  1 et 10. 
+Vous avez trois chance.</p>
+  
+<div class="form">
+    <label for="guessField">Entre le nombre: </label>
+    <input type = "text" id = "guessField" class = "guessField">
+    <input type = "submit" value = "Valide" 
+           class = "guessSubmit" id = "submitguess">
+</div>
+  
+<script type = "text/javascript">
+  
+    var y = Math.floor(Math.random() * 10 + 1);
+      
+    var guess = 0;  
+
+      
+    document.getElementById("submitguess").onclick = function(){
+        
+   var x = document.getElementById("guessField").value;
+  
+   if(x == y)
+   {    
+       alert("VRAI ");
+   }
+   else if(x > y) 
+   {    
+       guess++;
+       alert("Faux, plus petit");
+   }
+   else
+   {
+       guess++;
+       alert("Faux, plus grand")
+   }
+   if (guess == 3) {
+    window.alert("Désolé, c'est fini. Le nombre correct était : " + y);
+    location.reload();
+    }
+}
+</script>
+</body>
+</html>   
